@@ -35,3 +35,5 @@ var reverseList = function (head) {
 //
 // The main point for this problem is to use pointers,
 // and know how to move the pointers to achieve the goal.
+
+// Next time try using recursive to solve it.
