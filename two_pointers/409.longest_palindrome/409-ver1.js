@@ -19,3 +19,6 @@ var longestPalindrome = function (s) {
   }
   return count + count_sig;
 };
+
+// it works,
+// next time try to solve it without using sort;
