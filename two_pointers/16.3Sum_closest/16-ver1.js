@@ -26,3 +26,12 @@ var threeSumClosest = function (nums, target) {
   }
   return cSum;
 };
+
+// used three pointers; sort the array first;
+// first one i is keep looping through the array;
+// second one is called left
+//  - if arr[i] + arr[left] + arr[right] < target: means
+//    the left is too small which needs left++;
+// third one is called right
+//  - if arr[i] + arr[left] + arr[right] > target: means
+//    the right is too big which needs right--;
