@@ -35,3 +35,5 @@ var threeSumClosest = function (nums, target) {
 // third one is called right
 //  - if arr[i] + arr[left] + arr[right] > target: means
 //    the right is too big which needs right--;
+//
+// for next time: see if there is any other mathod;
