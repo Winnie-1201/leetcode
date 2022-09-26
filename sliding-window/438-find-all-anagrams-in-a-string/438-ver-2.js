@@ -58,3 +58,5 @@ var equalMap = function (map1, map2) {
 
 // DO NOT forget to write the "else";
 // sometime it does not work for not explicitly writing the else clause;
+// next time:
+// try other method;
