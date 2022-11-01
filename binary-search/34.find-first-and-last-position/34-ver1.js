@@ -6,8 +6,8 @@
 var searchRange = function (nums, target) {
   let left = 0;
   let right = nums.length - 1;
-  let start = nums[left] === target ? left : -1;
-  let end = nums[right] === target ? right : -1;
+  let start = -1;
+  let end = -1;
   let mid;
   let test = false;
   while (left <= right) {
@@ -20,8 +20,8 @@ var searchRange = function (nums, target) {
       right = mid - 1;
     } else {
       test = true;
-      end = end <= end ? end : mid;
-      start = start <= mid ? start : mid;
+      //   end = end <= mid ? end : mid;
+      //   start = start <= mid ? start : mid;
       left++;
       right--;
     }
