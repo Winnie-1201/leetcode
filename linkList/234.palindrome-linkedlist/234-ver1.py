@@ -49,6 +49,7 @@ class Solution:
         # prev, slow, prev.next = slow, slow.next, None
 
         # # reverse the second half:
+        # # the order matters!
         # while slow:
         #     slow.next, prev, slow = prev, slow, slow.next
         # fast, slow = head, prev
