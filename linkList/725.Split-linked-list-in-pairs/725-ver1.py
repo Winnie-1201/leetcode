@@ -9,7 +9,7 @@ class ListNode:
 
 
 class Solution:
-    def splitListToParts(self, head: Optional[ListNode], k: int) -> List[Optional[ListNode]]:
+    def splitListToParts(self, head: Optional[ListNode], k: int) -> ListNode[Optional[ListNode]]:
         count = 0
         temp = head
         while temp:
