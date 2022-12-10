@@ -14,22 +14,16 @@ class Solution:
         if not root:
             return True
 
-        def helper(node):
-            if not node:
+        def helper(root):
+            if not root:
                 return 0
 
-            left = helper(node.left)
-            right = helper(node.right)
-#             the flag used to check if any tree starts with the node
-#             is unbanlanced
-            if left == -1 or right == -1:
-                return -1
-            if abs(left - right) > 1:
-                return -1
+            left = helper(root.left)
+            right = helper(root.right)
 
             return 1 + max(left, right)
 
-        if helper(root) == -1:
+        if abs(helper(root.left) - helper(root.right)) > 1:
             return False
 
-        return True
+        return self.isBalanced(root.left) and self.isBalanced(root.right)

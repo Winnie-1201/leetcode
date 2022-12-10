@@ -1,5 +1,4 @@
 # Definition for a binary tree node.
-from ast import List
 from typing import Optional
 
 
@@ -11,29 +10,22 @@ class TreeNode:
 
 
 class Solution:
-    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
-        if not root:
-            return 0
+    def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
         queue = [root]
-        res = []
+        res = queue[0].val
 
         while queue:
             temp = []
-            sum, count = 0, 0
+
             while queue:
                 curr = queue.pop(0)
-
-                sum += curr.val
-                count += 1
 
                 if curr.left:
                     temp.append(curr.left)
                 if curr.right:
                     temp.append(curr.right)
 
+            if temp:
+                res = temp[0].val
             queue = temp
-            res.append(sum / count)
         return res
-
-# use BFS
-# next time: try DFS
