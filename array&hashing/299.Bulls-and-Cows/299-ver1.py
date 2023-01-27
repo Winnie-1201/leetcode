@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class Solution:
     def getHint(self, secret: str, guess: str) -> str:
         cow = 0
