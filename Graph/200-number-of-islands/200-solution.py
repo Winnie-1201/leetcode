@@ -59,11 +59,10 @@ class SolutionBFS:
                         q.append((r, c))
                         visited.add((r, c))
 
-            for r in range(rows):
-                for c in range(cols):
-
-                    if grid[r][c] == "1" and (r, c) not in visited:
-                        bfs(r, c)
-                        islands += 1
+        for r in range(rows):
+            for c in range(cols):
+                if grid[r][c] == "1" and (r, c) not in visited:
+                    bfs(r, c)
+                    islands += 1
 
         return islands
